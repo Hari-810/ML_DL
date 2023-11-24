@@ -1,4 +1,5 @@
 import nbformat
+import os
 
 def extract_code_cells(notebook_path):
     with open(notebook_path, 'r', encoding='utf-8') as notebook_file:
@@ -18,8 +19,10 @@ def write_code_to_text_file(code_cells, output_file_path):
             output_file.write('\n\n')  # Add some separation between code cells
 
 if __name__ == "__main__":
-    notebook_path = "supervised_learning\gradient_descent\gd.ipynb"
-    output_file_path = "supervised_learning\gradient_descent\code.txt"
+    notebook_path = r"supervised_learning\decision_tree\Decision_Trees.ipynb"
+    # output_file_path = r"supervised_learning\decision_tree\Decision_Trees\code.txt"
+    output_file_path = 'supervised_learning\\decision_tree\\Decision_Trees\\code.txt'
+    os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
 
     code_cells = extract_code_cells(notebook_path)
     write_code_to_text_file(code_cells, output_file_path)

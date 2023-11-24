@@ -1,0 +1,25 @@
+import nbformat
+
+def extract_code_cells(notebook_path):
+    with open(notebook_path, 'r', encoding='utf-8') as notebook_file:
+        notebook_content = nbformat.read(notebook_file, as_version=4)
+
+    code_cells = []
+    for cell in notebook_content['cells']:
+        if cell['cell_type'] == 'code':
+            code_cells.append(cell['source'])
+
+    return code_cells
+
+def write_code_to_text_file(code_cells, output_file_path):
+    with open(output_file_path, 'w', encoding='utf-8') as output_file:
+        for code_cell in code_cells:
+            output_file.write(code_cell)
+            output_file.write('\n\n')  # Add some separation between code cells
+
+if __name__ == "__main__":
+    notebook_path = "supervised_learning\gradient_descent\gd.ipynb"
+    output_file_path = "supervised_learning\gradient_descent\code.txt"
+
+    code_cells = extract_code_cells(notebook_path)
+    write_code_to_text_file(code_cells, output_file_path)

@@ -12,3 +12,15 @@ Hypothesis Testing - Z test & T test
 Find The Z Score Given The Confidence Level of a Normal Distribution
 
             https://youtu.be/sJyZ9vRhP7o?si=8WXtwJu2GlYr9hqE
+
+
+https://huggingface.co/Abdelrhman-Elruby
+
+
+Machine Learning Projects Playlist:
+
+    https://youtube.com/playlist?list=PLfFghEzKVmjvuSA67LszN1dZ-Dd_pkus6&si=c2tV8IGbK11b7Iiw
+
+EDA playlist:
+
+    https://youtube.com/playlist?list=PL_1pt6K-CLoDMEbYy2PcZuITWEjqMfyoA&si=ckLscNnm9nnVzaIG

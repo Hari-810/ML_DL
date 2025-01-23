@@ -169,19 +169,7 @@ The **Binomial Distribution** models the number of successes in a fixed number o
 #### **2. Mathematical Formula and Components**
 
 The probability mass function (PMF) of the Binomial Distribution is:
-
-\[
-P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}
-\]
-
-Where:
-
-- \( X \): Number of successes in \( n \) trials.
-- \( n \): Total number of trials.
-- \( k \): Number of successes (0 ≤ \( k \) ≤ \( n \)).
-- \( p \): Probability of success in a single trial.
-- \( 1-p \): Probability of failure in a single trial.
-- \( \binom{n}{k} = \frac{n!}{k!(n-k)!} \): Binomial coefficient, representing the number of ways to choose \( k \) successes from \( n \) trials.
+![alt text](image.png)
 
 ---
 

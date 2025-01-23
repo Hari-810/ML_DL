@@ -274,17 +274,17 @@ It is often used to model rare events, such as the number of earthquakes in a re
 
 #### **2. Mathematical Formula**
 
-## ![alt text](image-4.png)
+![alt text](image-4.png)
 
 #### **3. Sample Data**
 
-Suppose a call center receives an average of \( \lambda = 3 \) calls per hour. We want to calculate the probability of receiving exactly 4 calls in an hour (\( k = 4 \)).
+Suppose a call center receives an average of λ = 3 calls per hour. We want to calculate the probability of receiving exactly 4 calls in an hour ( k = 4 ).
 
 ---
 
 #### **4. Step-by-Step Derivation and Visualization**
 
-## ![alt text](image-5.png)
+![alt text](image-5.png)
 
 #### **5. Pros, Cons, and Key Properties**
 
@@ -292,7 +292,7 @@ Suppose a call center receives an average of \( \lambda = 3 \) calls per hour. W
 
 - Suitable for modeling rare events.
 - Simple to compute and interpret.
-- Only one parameter (\( \lambda \)) is needed.
+- Only one parameter λ is needed.
 
 **Cons:**
 
@@ -303,8 +303,8 @@ Suppose a call center receives an average of \( \lambda = 3 \) calls per hour. W
 
 - **Mean**: μ=λ
 - **Variance**: σ^2 = λ
-- **Skewness**: 1\(sqrt{λ} )
-- **Kurtosis**: 1\(λ)
+- **Skewness**: 1/(sqrt{λ} )
+- **Kurtosis**: 1/(λ)
 
 ---
 

@@ -181,11 +181,11 @@ The probability mass function (PMF) of the Binomial Distribution is:
 
 #### **4. Step-by-Step Derivation and Visualization**
 
-## ![alt text](image-2.png)
+![alt text](image-2.png)
 
 #### **5. Pros, Cons, and Key Properties**
 
-## ![alt text](image-3.png)
+![alt text](image-3.png)
 
 #### **6. Applications and Real-World Examples**
 
@@ -258,4 +258,117 @@ By understanding and applying the Binomial Distribution, you can analyze and int
 
 ---
 
-dyjs
+## **Poisson Distribution**
+
+#### **1. What is the Poisson Distribution?**
+
+The **Poisson Distribution** models the probability of a given number of events occurring in a fixed interval of time or space, provided these events happen:
+
+1. Independently of each other.
+2. At a constant average rate λ.
+3. Without any two events happening simultaneously.
+
+It is often used to model rare events, such as the number of earthquakes in a region or the number of customers arriving at a store in a given hour.
+
+---
+
+#### **2. Mathematical Formula**
+
+## ![alt text](image-4.png)
+
+#### **3. Sample Data**
+
+Suppose a call center receives an average of \( \lambda = 3 \) calls per hour. We want to calculate the probability of receiving exactly 4 calls in an hour (\( k = 4 \)).
+
+---
+
+#### **4. Step-by-Step Derivation and Visualization**
+
+## ![alt text](image-5.png)
+
+#### **5. Pros, Cons, and Key Properties**
+
+**Pros:**
+
+- Suitable for modeling rare events.
+- Simple to compute and interpret.
+- Only one parameter (\( \lambda \)) is needed.
+
+**Cons:**
+
+- Assumes events occur independently and at a constant rate.
+- Not suitable for over-dispersed or under-dispersed data.
+
+**Key Properties:**
+
+- **Mean**: μ=λ
+- **Variance**: σ^2 = λ
+- **Skewness**: 1\(sqrt{λ} )
+- **Kurtosis**: 1\(λ)
+
+---
+
+#### **6. Applications and Real-World Examples**
+
+**When to Use:**
+
+- Events are discrete and occur independently.
+- The average event rate is known and constant over time or space.
+
+**Real-World Examples:**
+
+- Number of customer arrivals at a store per hour.
+- Number of typing errors per page in a document.
+- Number of accidents at a traffic intersection in a day.
+
+---
+
+#### **7. Importance in Statistics and Machine Learning**
+
+1. **In Statistics**:
+
+   - Helps model count data.
+   - Integral to hypothesis testing for rare events (e.g., testing if an event rate differs from historical data).
+
+2. **In Machine Learning**:
+   - Forms the basis for Poisson regression, used for modeling count-based response variables.
+   - Useful in Natural Language Processing for modeling word frequencies.
+
+---
+
+#### **8. Python Implementation**
+
+Here’s how to compute and visualize the Poisson Distribution in Python:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import poisson
+
+# Parameter
+lam = 3  # Average rate of events (lambda)
+
+# Possible outcomes (number of events)
+k = np.arange(0, 11)  # Range of event counts (0 to 10)
+
+# Calculate probabilities
+probabilities = poisson.pmf(k, lam)
+
+# Display probabilities
+print("Probabilities for each outcome:", probabilities)
+
+# Visualization
+plt.bar(k, probabilities, color='skyblue', alpha=0.7, edgecolor='black')
+plt.title("Poisson Distribution (λ = 3)")
+plt.xlabel("Number of events (k)")
+plt.ylabel("Probability")
+plt.xticks(k)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()
+```
+
+**Output**: The probabilities for \( k = 0, 1, 2, \dots, 10 \), and a bar chart showing the distribution.
+
+---
+
+By understanding and applying the Poisson Distribution, you can effectively model and analyze count-based data, making it a critical tool in both statistical and machine learning contexts.

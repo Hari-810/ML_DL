@@ -175,53 +175,17 @@ The probability mass function (PMF) of the Binomial Distribution is:
 
 #### **3. Sample Data to Illustrate Application**
 
-**Scenario**: You toss a fair coin (\( p = 0.5 \)) 5 times (\( n = 5 \)). What is the probability of observing exactly \( k = 3 \) heads?
-
-Using the formula:
-\[
-P(X = 3) = \binom{5}{3} (0.5)^3 (1-0.5)^{5-3}
-\]
+![alt text](image-1.png)
 
 ---
 
 #### **4. Step-by-Step Derivation and Visualization**
 
-1. **Calculate \( \binom{5}{3} \):**
-   \[
-   \binom{5}{3} = \frac{5!}{3!(5-3)!} = \frac{120}{6 \cdot 2} = 10
-   \]
-
-2. **Substitute into the formula:**
-   \[
-   P(X = 3) = 10 \cdot (0.5)^3 \cdot (0.5)^2 = 10 \cdot 0.125 \cdot 0.25 = 0.3125
-   \]
-
-3. **Interpretation**: The probability of getting exactly 3 heads in 5 tosses is **31.25%**.
-
-4. **Visualization**:
-   - Using Python or other tools, plot \( P(X = k) \) for \( k = 0, 1, 2, 3, 4, 5 \).
-
----
+## ![alt text](image-2.png)
 
 #### **5. Pros, Cons, and Key Properties**
 
-**Key Properties:**
-
-- Mean: \( \mu = n \cdot p \).
-- Variance: \( \sigma^2 = n \cdot p \cdot (1-p) \).
-- Symmetrical when \( p = 0.5 \); skewed otherwise.
-
-**Pros:**
-
-- Simple to compute and interpret.
-- Applicable to many real-world scenarios with binary outcomes.
-
-**Cons:**
-
-- Assumes independence of trials and constant \( p \), which may not hold in some cases.
-- Not suitable for large \( n \) when direct computation becomes impractical (approximation via Normal or Poisson distributions is often used).
-
----
+## ![alt text](image-3.png)
 
 #### **6. Applications and Real-World Examples**
 
@@ -254,4 +218,44 @@ Understanding the Binomial Distribution is critical because it bridges theoretic
 
 ---
 
-Would you like to see a Python implementation for visualization and further exploration?
+#### **8. Python Implementation**
+
+Here’s how you can compute and visualize the Binomial Distribution in Python:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import binom
+
+# Parameters
+n = 5  # Number of trials
+p = 0.6  # Probability of success
+
+# Possible outcomes (0 to n successes)
+x = np.arange(0, n+1)
+
+# Calculate probabilities
+probabilities = binom.pmf(x, n, p)
+
+# Display probabilities
+print("Probabilities for each outcome:", probabilities)
+
+# Visualization
+plt.bar(x, probabilities, color='skyblue', alpha=0.7, edgecolor='black')
+plt.title("Binomial Distribution (n=5, p=0.6)")
+plt.xlabel("Number of successes (k)")
+plt.ylabel("Probability")
+plt.xticks(x)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()
+```
+
+This will output the probabilities for each outcome and display a bar chart of the distribution.
+
+---
+
+By understanding and applying the Binomial Distribution, you can analyze and interpret binary-outcome data effectively, making it a crucial tool in both statistics and machine learning.
+
+---
+
+dyjs
